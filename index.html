@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Artykuły</title>
+  <script src="https://unpkg.com/date-fns@3.6.0/dist/date-fns.umd.min.js"></script>
+</head>
+<body>
+  <h1>Artykuły</h1>
+
+  <select id="sort">
+    <option value="created_at.asc">Po dacie rosnąco</option>
+    <option value="created_at.desc">Po dacie malejąco</option>
+    <option value="title.asc">Po nazwie alfabetycznie</option>
+  </select>
+
+  <div id="articles"></div>
+
+  <h2>Dodaj artykuł</h2>
+  <form id="articleForm">
+    <input name="title" placeholder="Tytuł" required><br>
+    <input name="subtitle" placeholder="Podtytuł" required><br>
+    <input name="author" placeholder="Autor" required><br>
+    <textarea name="content" placeholder="Treść" required></textarea><br>
+    <input type="date" name="created_at"><br>
+    <button type="submit">Dodaj</button>
+  </form>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
